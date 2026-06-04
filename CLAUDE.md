@@ -1,46 +1,61 @@
-# CLAUDE.md — Istruzioni per Claude Code e Perplexity
+# CLAUDE.md — Istruzioni per Claude Code, OpenHands, Perplexity
 
-> Letto automaticamente da Claude Code, OpenHands e Perplexity Spaces quando puntati a questo repo.
+> Letto automaticamente da Claude Code, OpenHands e Perplexity Spaces.
+> Versione: 2.0 | Aggiornato: Giugno 2026
+
+---
 
 ## Contesto Utente
 
-Sono un tributarista e solutions architect italiano.
-- **Studio**: Biscozzi Nobili & Partners
-- **Specializzazione**: Transfer Pricing, fiscalità internazionale
-- **Background tecnico**: workflow HA, automazione, AI agents
-- **Posizione**: Boves (CN), Piemonte
+- **Ruolo**: Tributarista + Senior Solutions Architect
+- **Studio**: Biscozzi Nobili & Partners, Boves (CN) — Piemonte
+- **Specializzazione**: Transfer Pricing, fiscalità internazionale, workflow HA
+- **Stack tecnico preferito**: Python 3.12+, FastAPI, n8n, OpenHands, OpenRouter
+
+---
 
 ## Regole di Comportamento
 
-1. **Brainstorm prima di tutto** — mai rispondere senza analisi preliminare
+### Obbligatorio
+1. **Brainstorm prima** — mai rispondere senza analisi preliminare
 2. **Piano strutturato** — sempre prima del codice o della soluzione
-3. **TDD** quando si scrive codice: RED → GREEN → REFACTOR
+3. **TDD** per codice: RED → GREEN → REFACTOR
 4. **Quality gate** prima di consegnare qualsiasi output
-5. **Cita sempre** la fonte normativa (OCSE Guidelines, TUIR, Direttive UE)
+5. **Cita sempre** la fonte normativa (art. + testo normativo + anno)
 6. **Rollback plan** per ogni cambiamento rilevante
+7. **Skill auto-load** — carica le skill da `.github/skills/` quando pertinenti
+
+### Skill Trigger → File
+- Transfer Pricing → `.github/skills/transfer-pricing/SKILL.md`
+- Fiscalità internazionale → `.github/skills/fiscalita-internazionale/SKILL.md`
+- Workflow / automazione → `.github/skills/architettura-workflow/SKILL.md`
+- Pillar Two / GloBE → `.github/skills/pillar-two/SKILL.md`
+
+---
 
 ## Preferenze Tecniche
 
-- Python 3.12+, FastAPI, Pydantic v2
-- Structured logs, OpenTelemetry, metriche RED
-- Secrets fuori dal codice (env vars / vault)
-- No `bare except`, no `eval/exec` su input utente
-- Type hints su tutte le API pubbliche
-
-## Skill da Caricare
-
-Se disponibili, carica automaticamente le skill da `.github/skills/`.
-
-## Output Default
-
-Usa sempre questa struttura per risposte complesse:
+```yaml
+language: Python 3.12+
+framework: FastAPI + Pydantic v2
+test: pytest + coverage ≥ 80%
+linting: ruff + mypy strict
+security: bandit, no bare except, no eval/exec
+logging: structured JSON + correlation_id
+tracing: OpenTelemetry
+secrets: env vars / HashiCorp Vault (mai hardcoded)
 ```
-## Sintesi
-## Mente locale
-## Piano operativo
-## Soluzione
-## Workaround / fallback
-## Rischi e mitigazioni
-## Validazione
-## Prossimi passi
+
+---
+
+## Output Default per Risposte Complesse
+
+```
+## 🧠 Mente Locale
+## 📋 Piano Operativo  
+## ✅ Soluzione
+## 🔧 Workaround / Fallback
+## ⚠️ Rischi e Mitigazioni
+## 🔍 Validazione
+## 🚀 Prossimi Passi
 ```
