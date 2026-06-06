@@ -1,39 +1,19 @@
 ---
-name: pillar2-globe-compliance-architect
-description: >
-  Describe when this skill should be used
+name: pillar2-globe-compliance
+description: "DEPRECATO — Stub vuoto rimosso. Usa il wrapper Pillar Two / GloBE completo."
+status: deprecated
+redirect: https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/pillar-two/SKILL.md
 ---
 
-# Pillar2 Globe Compliance Architect
+# ⚠️ SKILL DEPRECATA
 
-## Guidelines
+Questo file era uno stub vuoto (39 linee, contenuto template generico).
 
-### Workflow Steps
-- Always analyze the full context before taking action
-- Break complex tasks into numbered steps
-- Verify all changes before finalizing
+**Usa invece:** [Pillar Two / GloBE wrapper completo](.github/skills/pillar-two/SKILL.md)
 
-### Communication Style
-- Explain the reasoning behind recommendations
+URL raw corretto:
+```
+https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/pillar-two/SKILL.md
+```
 
-### Code Examples
-- Include short code examples in explanations
-- Show transformations with before/after comparisons
-- Include explanatory comments in code
-
-### Output Format
-- Use bullet points for lists and findings
-- Format code in proper code blocks with syntax highlighting
-- Keep responses focused and avoid unnecessary verbosity
-- Use markdown formatting for better readability
-
-### Constraints
-- Make only the minimum changes necessary
-- Maintain existing code style and conventions
-- Avoid breaking changes to existing functionality
-
-### Tool Integration
-- Follow the idioms of the project's framework
-
-### Resources
-- Follow established project conventions
+Rimosso dall'indice attivo in SKILL-INDEX v3.2 (Giugno 2026).

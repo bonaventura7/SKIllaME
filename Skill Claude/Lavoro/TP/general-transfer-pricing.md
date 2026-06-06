@@ -1,39 +1,21 @@
 ---
-name: 'general-transfer-pricing'
-description: >
-  - Skill di consulenza tecnico-giuridica in materia di Transfer Pricing per gruppi multinazionali con entita italiane. Copre compliance documentale, analisi funzionale, benchmarking, metodi TP, ruling, contenzioso e Pillar Two (GloBE). Base normativa: OECD TPG 2022, D.M. 14/05/2018, Provv. AdE 360494/2020, Circolari 15/E 2021 e 16/E 2022, D.Lgs. 209/2023.
+name: general-transfer-pricing
+description: "DEPRECATO — Stub vuoto rimosso. Usa TP Core o TP Toolbox."
+status: deprecated
+redirect: https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Lavoro/TP/transfer-pricing.md
 ---
 
-# 'general Transfer Pricing'
+# ⚠️ SKILL DEPRECATA
 
-## Guidelines
+Questo file era uno stub vuoto (39 linee, contenuto template generico).
 
-### Workflow Steps
-- Always analyze the full context before taking action
-- Break complex tasks into numbered steps
-- Verify all changes before finalizing
+**Usa invece:**
+- [TP Core](transfer-pricing.md) — framework decisionale OCSE, 6 step
+- [TP Toolbox v2.4.0](tp-toolbox-v2.4.0.md) — hub operativo con 7 moduli
 
-### Communication Style
-- Explain the reasoning behind recommendations
+URL raw corretto (TP Core):
+```
+https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Lavoro/TP/transfer-pricing.md
+```
 
-### Code Examples
-- Include short code examples in explanations
-- Show transformations with before/after comparisons
-- Include explanatory comments in code
-
-### Output Format
-- Use bullet points for lists and findings
-- Format code in proper code blocks with syntax highlighting
-- Keep responses focused and avoid unnecessary verbosity
-- Use markdown formatting for better readability
-
-### Constraints
-- Make only the minimum changes necessary
-- Maintain existing code style and conventions
-- Avoid breaking changes to existing functionality
-
-### Tool Integration
-- Follow the idioms of the project's framework
-
-### Resources
-- Follow established project conventions
+Rimosso dall'indice attivo in SKILL-INDEX v3.2 (Giugno 2026).
