@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "version": "1.0",
+    "sourceFiles": ["example.pptx"],
+    "extractedAt": "2026-06-06T12:00:00Z",
+    "slideOrPageDimensions": {
+      "width": 33.87,
+      "height": 19.05,
+      "unit": "cm",
+      "originalUnit": "EMU"
+    },
+    "totalPages": 1,
+    "overallConfidence": 0,
+    "extractionMethodsUsed": ["structural", "visual"],
+    "notes": ""
+  },
+  "globalStyles": {
+    "themeColors": {
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "accent1": "#2B6CB0",
+      "accent2": "#38A169",
+      "hyperlink": "#3182CE"
+    },
+    "fontScheme": {
+      "major": "Calibri Light",
+      "minor": "Calibri"
+    },
+    "defaultTextStyle": {
+      "fontFamily": "Calibri",
+      "sizePt": 18,
+      "color": "#1A202C"
+    }
+  },
+  "pages": [
+    {
+      "pageId": "page-1",
+      "pageNumber": 1,
+      "type": "content",
+      "title": "",
+      "background": {
+        "type": "solid",
+        "color": "#FFFFFF"
+      },
+      "elements": [],
+      "notes": ""
+    }
+  ],
+  "repeatingPatterns": [],
+  "audit": {
+    "fidelityScore": 0,
+    "discrepancies": [],
+    "assumptions": []
+  }
+}
