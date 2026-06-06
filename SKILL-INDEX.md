@@ -1,6 +1,6 @@
 # SKILL-INDEX — SKIllaME v3.2
 
-> **Master index COMPLETO di tutte le skill disponibili — 34 skill attive + 40+ community.**
+> **Master index COMPLETO di tutte le skill disponibili — 35 skill attive + 40+ community.**
 > Copia gli URL raw nella sezione Knowledge di un MyGPT, nelle Sources di Perplexity Space,
 > o incollali come prompt di sessione in qualsiasi agente AI.
 >
@@ -35,37 +35,36 @@
 | 11 | **TP Doc Valbruna (caso reale)** | 🟡 Draft | valbruna, documentazione TP caso, local file esempio | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Lavoro/TP/tp%20doc%20valbrunaaaa.md` |
 | 12 | **TP Schiavo / Omni TP v4.0** | 🟡 Draft | tp schiavo, architect omni tp, workflow documentazione | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/tp-schiavo.md` |
 
-> ⚠️ **RIMOSSO (Stub vuoto)**: `general-transfer-pricing.md` — usa skill #8 (TP Core) come alternativa.
-> ⚠️ **RIMOSSO (Stub vuoto)**: `tp doc valbruna.md` — usa skill #11 (TP Doc Valbruna completo) come alternativa.
+> ✅ **STUB RIMOSSI**: `general-transfer-pricing.md` e `tp doc valbruna.md` ora reindirizzano al file corretto. Usa #8 (TP Core) e #11 (TP Doc Valbruna completo) come alternative.
 
 ---
 
-## 🟢 SKILL FISCALITÀ INTERNAZIONALE — 4 skill
+## 🟢 SKILL FISCALITÀ INTERNAZIONALE — 2 skill attive
 
 | # | Skill | Stato | Trigger Keywords | URL Raw |
 |---|-------|-------|-----------------|----------|
 | 13 | **Pillar Two / GloBE** (wrapper completo) | ✅ Produzione | GloBE, IIR, UTPR, QDMTT, STTR, 15%, D.Lgs. 209/2023, ETR | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/pillar-two/SKILL.md` |
-| 14 | **Pillar2 Globe Compliance** | ⚠️ Stub | pillar2, globe compliance, calcolo ETR, STTR | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Lavoro/TP/pillar2_globe_compliance_skill.md` |
-| 15 | **Fiscalità Internazionale** (wrapper completo) | ✅ Produzione | CFC, MAP, APA, trattati, WHT, BEPS, stabile organizzazione | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/fiscalita-internazionale/SKILL.md` |
-| 16 | **General Transfer Pricing** | ⚠️ Stub | transfer pricing base, introduzione TP, general | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Lavoro/TP/general-transfer-pricing.md` |
+| 14 | **Fiscalità Internazionale** (wrapper completo) | ✅ Produzione | CFC, MAP, APA, trattati, WHT, BEPS, stabile organizzazione | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/fiscalita-internazionale/SKILL.md` |
 
-> ⚠️ Skill #14 e #16 sono stub — contenuto template generico. Per uso in produzione usa #13 (Pillar Two wrapper) e #8 (TP Core).
+> ✅ **STUB RIMOSSI (B3+B4)**: `pillar2_globe_compliance_skill.md` e `general-transfer-pricing.md` ora contengono redirect al file corretto invece di template vuoto.
+> Usa #13 (Pillar Two wrapper) per Pillar 2, usa #8 (TP Core) per General TP.
 
 ---
 
-## 🔴 SKILL AGENTI AI — 7 skill
+## 🔴 SKILL AGENTI AI — 8 skill
 
 | # | Skill | Stato | Trigger Keywords | URL Raw |
 |---|-------|-------|-----------------|----------|
-| 17 | **Agente TP Benchmark (StAIgista)** | ✅ Produzione | agente benchmark, StAIgista, analisi autonoma comparabili | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/StAIgista%20tp-benchmark.md` |
-| 18 | **Agente Conta Ore CDL** | ✅ Produzione | timesheet, ore lavorate, CDL, fatturazione ore, studio | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/Agente%20CDL%20conta%20ore.md` |
-| 19 | **Agente File Mapper** | ✅ Produzione | file mapper, organizzazione file, cartelle, indice documenti | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/Agente%20giletti%20file-mapper.md` |
-| 20 | **Agente Trenitalia v5.1.1** 🆕 | ✅ Produzione | trenitalia, treni, biglietti, rimborso, OTP, CartaFRECCIA | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/skill_agent_trenitalia.md` |
-| 21 | **Agente Valutatore Immobili Milano v5.1** 🆕 | ✅ Produzione | valutazione immobili, Milano, perizia, CRU, OMI, TIR | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/valutatore-immobili-milano-v5.1.md` |
-| 22 | **Agente IT Help Desk** 🆕 | 🟡 Draft | IT helpdesk, supporto tecnico, troubleshooting, Windows | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/agente-it-helpdesk/SKILL.md` |
-| 23 | **EDFX Pricing Agent v3.1-HA** 🆕 | ✅ Produzione | EDFX, pricing, credit spread, Moody's, bond, ISIN | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/EDFX_Pricing_Agent_Skill_v3.1%20no%20claudio.md` |
+| 15 | **Agente TP Benchmark (StAIgista)** | ✅ Produzione | agente benchmark, StAIgista, analisi autonoma comparabili | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/StAIgista%20tp-benchmark.md` |
+| 16 | **Agente Conta Ore CDL** | ✅ Produzione | timesheet, ore lavorate, CDL, fatturazione ore, studio | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/Agente%20CDL%20conta%20ore.md` |
+| 17 | **Agente File Mapper** | ✅ Produzione | file mapper, organizzazione file, cartelle, indice documenti | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/Agente%20giletti%20file-mapper.md` |
+| 18 | **Agente Trenitalia v5.1.1** | ✅ Produzione | trenitalia, treni, biglietti, rimborso, OTP, CartaFRECCIA | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/skill_agent_trenitalia.md` |
+| 19 | **Agente Valutatore Immobili Milano v5.1** | ✅ Produzione | valutazione immobili, Milano, perizia, CRU, OMI, TIR | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/valutatore-immobili-milano-v5.1.md` |
+| 20 | **Agente IT Help Desk** | 🟡 Draft | IT helpdesk, supporto tecnico, troubleshooting, Windows | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/agente-it-helpdesk/SKILL.md` |
+| 21 | **Architect-Omni Prime** 🆕 | ✅ Produzione | architect omni, solution architecture, backend, Python, AI systems, HA, resilienza | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/architect-omni-prime.md` |
+| 22 | **EDFX Pricing Agent v3.1-HA** | ✅ Produzione | EDFX, pricing, credit spread, Moody's, bond, ISIN | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/EDFX_Pricing_Agent_Skill_v3.1%20no%20claudio.md` |
 
-> ⚠️ Il file `IT Help Desk.md` nel repo contiene la skill **ARCHITECT-OMNI PRIME**. Il wrapper #22 in `.github/skills/agente-it-helpdesk/` è il riferimento corretto per IT Help Desk. Da rinominare `IT Help Desk.md` → `architect-omni-prime.md` in futuro.
+> ✅ **BUG B1 RISOLTO**: `IT Help Desk.md` rinominato in `architect-omni-prime.md`. Architect-Omni Prime ora ha la sua entry dedicata (#21) con URL corretto.
 
 ---
 
@@ -73,8 +72,8 @@
 
 | # | Skill | Stato | Trigger Keywords | URL Raw |
 |---|-------|-------|-----------------|----------|
-| 24 | **Spreadsheet Reverse Engineering** | ✅ Produzione | Excel reverse, formula audit, spreadsheet analisi, Google Sheets | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Lavoro/Skill_Claude_Spreadsheet_Reverse_Engineering.md` |
-| 25 | **Architettura Workflow HA** | ✅ Produzione | n8n, workflow, resilienza, HA, retry, circuit breaker, agenti AI | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/architettura-workflow/SKILL.md` |
+| 23 | **Spreadsheet Reverse Engineering** | ✅ Produzione | Excel reverse, formula audit, spreadsheet analisi, Google Sheets | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Lavoro/Skill_Claude_Spreadsheet_Reverse_Engineering.md` |
+| 24 | **Architettura Workflow HA** | ✅ Produzione | n8n, workflow, resilienza, HA, retry, circuit breaker, agenti AI | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/architettura-workflow/SKILL.md` |
 
 ---
 
@@ -82,25 +81,24 @@
 
 | # | File | Stato | Descrizione | URL Raw |
 |---|------|-------|-------------|----------|
-| 26 | **Swiss Steel Italia TP Doc** | ✅ Produzione | Documentazione TP caso reale Swiss Steel (9 fasi, 5 transazioni IC) | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Lavoro/TP/swiss-steel-italia-transfer-pricing-documentation.md` |
+| 25 | **Swiss Steel Italia TP Doc** | ✅ Produzione | Documentazione TP caso reale Swiss Steel (9 fasi, 5 transazioni IC) | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Lavoro/TP/swiss-steel-italia-transfer-pricing-documentation.md` |
 
-> ⚠️ **RIMOSSO (Stub vuoto)**: `tp doc valbruna.md` — 39 linee, template boilerplate. Contenuto reale in skill #11.
-> ⚠️ **RIMOSSO (Duplicato)**: "Swiss Steel / Valbruna Full" — era identico all'URL di #26.
+> ✅ **RIMOSSO (Stub vuoto)**: `tp doc valbruna.md` — ora reindirizza a skill #11. **RIMOSSO (Duplicato)**: "Swiss Steel / Valbruna Full" — era identico all'URL di #25.
 
 ---
 
-## 🆕 NUOVE SKILL — 8 skill (v3.2)
+## 🆕 NUOVE SKILL — 10 skill (v3.2)
 
 | # | Skill | Stato | Trigger Keywords | URL Raw |
 |---|-------|-------|-----------------|----------|
-| 27 | **Bilancio Analysis** | 🟡 Draft | bilancio, OIC, IFRS, KPI, quadratura, variance, cash flow | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Lavoro/bilancio-analysis-SKILL.md` |
-| 28 | **LLM Council** | ✅ Produzione | confronto modelli, valutazione output, Claude vs ChatGPT, multi-modello | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/claude-skills-llm-council/SKILL.md` |
-| 29 | **Design Photocopy Clone** | ✅ Produzione | clona design, replica layout, PowerPoint, Excel, reverse engineering | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/design-photocopy-clone/SKILL.md` |
-| 30 | **PPTX Generator** | ✅ Produzione | genera PowerPoint, crea presentazione, slide automatiche, python-pptx | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/pptx/SKILL.md` |
-| 31 | **Photo Perfect Slim** | 🟡 Draft | fotoritocco, migliora foto, photo editing, rimuovi sfondo, ottimizza | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Personali/photo-perfect-slim/SKILL.md` |
-| 32 | **CopyONEwriter** | ✅ Produzione | copywriting, landing page, email marketing, SEO, brand voice | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/CopyONEwriter.md` |
-| 33 | **Longform Book Authoring** | 🟡 Draft | libro, longform, book authoring, capitoli, struttura narrativa | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Lavoro/longform-book-authoring.md` |
-| 34 | **Book2skill** | ✅ Produzione | converti libro in skill, estrai PDF, book to skill, knowledge extraction | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Scaricate/Book2skill/Book2skill.md` |
+| 26 | **Bilancio Analysis** | 🟡 Draft | bilancio, OIC, IFRS, KPI, quadratura, variance, cash flow | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Lavoro/bilancio-analysis-SKILL.md` |
+| 27 | **LLM Council** | ✅ Produzione | confronto modelli, valutazione output, Claude vs ChatGPT, multi-modello | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/claude-skills-llm-council/SKILL.md` |
+| 28 | **Design Photocopy Clone** | ✅ Produzione | clona design, replica layout, PowerPoint, Excel, reverse engineering | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/design-photocopy-clone/SKILL.md` |
+| 29 | **PPTX Generator** | ✅ Produzione | genera PowerPoint, crea presentazione, slide automatiche, python-pptx | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/pptx/SKILL.md` |
+| 30 | **Photo Perfect Slim** | 🟡 Draft | fotoritocco, migliora foto, photo editing, rimuovi sfondo, ottimizza | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Personali/photo-perfect-slim/SKILL.md` |
+| 31 | **CopyONEwriter** | ✅ Produzione | copywriting, landing page, email marketing, SEO, brand voice | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/CopyONEwriter.md` |
+| 32 | **Longform Book Authoring** | 🟡 Draft | libro, longform, book authoring, capitoli, struttura narrativa | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Lavoro/longform-book-authoring.md` |
+| 33 | **Book2skill** | ✅ Produzione | converti libro in skill, estrai PDF, book to skill, knowledge extraction | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Scaricate/Book2skill/Book2skill.md` |
 
 ---
 
@@ -112,7 +110,7 @@ Skill scaricate da repository esterne e community. Qualità mista — non verifi
 |-------|---------|----------|
 | `Agente DEK.md` | Agente documentale | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Scaricate/Skill/Agente%20DEK.md` |
 | `Agente Doc.md` | Agente documentazione | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Scaricate/Skill/Agente%20Doc.md` |
-| `EXcelente.md` / `Excel.md` | Skill Excel | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Scaricate/Skill/EXcelente.md` |
+| `EXcelente.md` | Skill Excel | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Scaricate/Skill/EXcelente.md` |
 | `Find Skills.md` | Ricerca skill | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Scaricate/Skill/Find%20Skills.md` |
 | `Market Research.md` | Ricerca mercato | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Scaricate/Skill/Market%20Research.md` |
 | `deep Research.md` | Ricerca approfondita | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Scaricate/Skill/deep%20Research.md` |
@@ -136,8 +134,6 @@ Skill scaricate da repository esterne e community. Qualità mista — non verifi
 
 ## ⚡ COPIA-INCOLLA RAPIDO — ChatGPT (sessione)
 
-Incolla all'inizio di ogni sessione ChatGPT per attivare le skill principali:
-
 ```
 ISTRUZIONI GLOBALI:
 https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/AGENTS.md
@@ -154,8 +150,8 @@ https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/pill
 FISCALITÀ INTERNAZIONALE:
 https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/fiscalita-internazionale/SKILL.md
 
-ARCHITETTURA WORKFLOW:
-https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/architettura-workflow/SKILL.md
+ARCHITECT-OMNI PRIME:
+https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/architect-omni-prime.md
 ```
 
 ---
@@ -177,15 +173,9 @@ https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/arch
 ## ⚡ GEMINI CLI / CLAUDE CODE — Setup automatico
 
 ```powershell
-# Scarica AGENTS.md come file istruzioni Gemini
-Invoke-WebRequest `
-  -Uri "https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/AGENTS.md" `
-  -OutFile "$env:USERPROFILE\.gemini\GEMINI.md"
-
-# Per Claude Code
-Invoke-WebRequest `
-  -Uri "https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/CLAUDE.md" `
-  -OutFile "$env:USERPROFILE\CLAUDE.md"
+# Windows PowerShell
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/AGENTS.md" -OutFile "$env:USERPROFILE\.gemini\GEMINI.md"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/CLAUDE.md" -OutFile "$env:USERPROFILE\CLAUDE.md"
 ```
 
 ```bash
@@ -199,10 +189,7 @@ curl -o ~/CLAUDE.md https://raw.githubusercontent.com/bonaventura7/SKIllaME/main
 ## ⚡ INSTALLAZIONE GH SKILL (tutti gli agenti)
 
 ```bash
-# Installa tutte le skill per tutti gli agenti
 gh skill install bonaventura7/SKIllaME --all
-
-# Per un agente specifico
 gh skill install bonaventura7/SKIllaME --all --agent claude-code
 gh skill install bonaventura7/SKIllaME --all --agent gemini
 gh skill install bonaventura7/SKIllaME --all --agent copilot
@@ -222,32 +209,32 @@ gh skill install bonaventura7/SKIllaME --all --agent copilot
 
 ---
 
-## 📊 STATISTICHE v3.2
+## 📊 STATISTICHE v3.2 — Post Bug Fix
 
 | Categoria | ✅ Produzione | 🟡 Draft | ⚠️ Stub | Totale Attive |
 |-----------|--------------|---------|--------|---------------|
 | Transfer Pricing | 8 | 4 | 0 | 12 |
-| Fiscalità Internazionale | 2 | 0 | 2 | 4 |
-| Agenti AI | 6 | 1 | 0 | 7 |
+| Fiscalità Internazionale | 2 | 0 | 0 | 2 |
+| Agenti AI | 7 | 1 | 0 | **8** |
 | Tecniche | 2 | 0 | 0 | 2 |
 | Casi Reali / Docs | 1 | 0 | 0 | 1 |
-| Nuove Skill (v3.2) | 4 | 4 | 0 | 8 |
+| Nuove Skill (v3.2) | 5 | 3 | 0 | 8 |
 | Community (terzi) | ~30+ | — | — | ~30+ |
-| **TOTALE** | **23** | **9** | **2** | **34 + 30+ community** |
+| **TOTALE** | **25** | **8** | **0** | **33 + 30+ community** |
 
-> **v3.1 dichiarava 28 skill (con 3 stub + 1 duplicato gonfiato). v3.2: 34 skill numerate + ~30 community. Stub rimossi dall'indice attivo: 3. Duplicato rimosso: 1.**
+> Stub rimossi: **3** (general-TP, pillar2-compliance, tp-doc-valbruna). Duplicato rimosso: **1**. Bug B1/B3/B4: **✅ RISOLTI**.
 
 ---
 
-## 🔍 BUG APERTI (da risolvere)
+## 🔍 BUG TRACKER
 
-| # | Bug | Priorità | Fix |
-|---|-----|----------|-----|
-| B1 | `IT Help Desk.md` contiene Architect-Omni Prime, non IT Help Desk | 🟡 Alta | Rinominare in `architect-omni-prime.md` |
-| B2 | `tp doc valbrunaaaa.md` — nome file con "aaaa" (provvisorio) | 🟡 Media | Rinominare in `tp-doc-valbruna.md` |
-| B3 | Stub #14 `pillar2_globe_compliance_skill.md` ancora presente nel repo | 🟡 Media | Completare o rimuovere dal repo |
-| B4 | Stub #16 `general-transfer-pricing.md` ancora presente nel repo | 🟡 Media | Completare o rimuovere dal repo |
-| B5 | Nomi file con spazi (`Report BM 2.0.md`, `Manual Review.md`) — meno robusti in CLI | 🟢 Bassa | Rinominare in kebab-case |
+| # | Bug | Stato | Fix applicato |
+|---|-----|-------|---------------|
+| B1 | `IT Help Desk.md` conteneva Architect-Omni Prime | ✅ RISOLTO | Rinominato in `architect-omni-prime.md`, entry #21 aggiunta |
+| B2 | `tp doc valbrunaaaa.md` — nome file con "aaaa" | 🟡 Aperto | Da rinominare in `tp-doc-valbruna.md` |
+| B3 | Stub `pillar2_globe_compliance_skill.md` | ✅ RISOLTO | Sostituito con redirect al wrapper corretto |
+| B4 | Stub `general-transfer-pricing.md` | ✅ RISOLTO | Sostituito con redirect a TP Core + TP Toolbox |
+| B5 | Nomi file con spazi (`Report BM 2.0.md`, `Manual Review.md`) | 🟢 Bassa | Da rinominare in kebab-case |
 
 ---
 
