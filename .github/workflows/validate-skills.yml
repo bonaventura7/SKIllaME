@@ -1,0 +1,151 @@
+name: Validate Skills
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '0 8 * * 1'  # Ogni lunedì alle 8:00 UTC
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    name: Validate Skill Index & URLs
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests pyyaml
+
+      - name: Check skill files are not empty stubs
+        run: |
+          python3 << 'EOF'
+          import os, sys
+          MIN_LINES = 50  # Minimo linee per non essere stub
+          stub_files = []
+          
+          for root, dirs, files in os.walk('Skill Claude'):
+              # Salta cartelle Scaricate (community skills, qualità mista)
+              dirs[:] = [d for d in dirs if d != 'Scaricate']
+              for f in files:
+                  if f.endswith('.md'):
+                      path = os.path.join(root, f)
+                      with open(path, 'r', encoding='utf-8', errors='ignore') as fp:
+                          lines = fp.readlines()
+                      if len(lines) < MIN_LINES:
+                          stub_files.append(f'{path} ({len(lines)} lines)')
+          
+          if stub_files:
+              print('\n⚠️  WARN: File con meno di 50 linee (possibili stub):')
+              for f in stub_files:
+                  print(f'  - {f}')
+              # Non fallisce la pipeline, solo avviso
+          else:
+              print('✅ Tutti i file skill hanno contenuto sufficiente')
+          EOF
+
+      - name: Check SKILL-INDEX URLs are reachable
+        run: |
+          python3 << 'EOF'
+          import re, sys
+          import urllib.request
+          import urllib.error
+          
+          with open('SKILL-INDEX.md', 'r') as f:
+              content = f.read()
+          
+          urls = re.findall(r'`(https://raw\.githubusercontent\.com/[^`]+)`', content)
+          failed = []
+          
+          for url in urls:
+              try:
+                  req = urllib.request.Request(url, method='HEAD')
+                  with urllib.request.urlopen(req, timeout=10) as resp:
+                      if resp.status != 200:
+                          failed.append(f'{url} -> HTTP {resp.status}')
+                      else:
+                          print(f'✅ {url.split("/")[-1]}')
+              except urllib.error.HTTPError as e:
+                  failed.append(f'{url} -> HTTP {e.code}')
+              except Exception as e:
+                  failed.append(f'{url} -> ERROR {e}')
+          
+          if failed:
+              print('\n❌ URL NON RAGGIUNGIBILI:')
+              for f in failed:
+                  print(f'  - {f}')
+              sys.exit(1)
+          else:
+              print(f'\n✅ Tutti i {len(urls)} URL raw sono raggiungibili (HTTP 200)')
+          EOF
+
+      - name: Check .github/skills wrappers have SKILL.md
+        run: |
+          python3 << 'EOF'
+          import os, sys
+          missing = []
+          skills_dir = '.github/skills'
+          
+          if os.path.exists(skills_dir):
+              for skill in os.listdir(skills_dir):
+                  skill_path = os.path.join(skills_dir, skill)
+                  if os.path.isdir(skill_path):
+                      skill_md = os.path.join(skill_path, 'SKILL.md')
+                      if not os.path.exists(skill_md):
+                          missing.append(skill_path)
+              
+              if missing:
+                  print('❌ Cartelle .github/skills/ senza SKILL.md:')
+                  for m in missing:
+                      print(f'  - {m}')
+                  sys.exit(1)
+              else:
+                  print('✅ Tutti i wrapper .github/skills/ hanno SKILL.md')
+          else:
+              print('⚠️  Directory .github/skills/ non trovata')
+          EOF
+
+      - name: Check version consistency
+        run: |
+          python3 << 'EOF'
+          import re
+          
+          files_to_check = ['README.md', 'SKILL-INDEX.md', 'AGENTS.md']
+          versions = {}
+          
+          for fname in files_to_check:
+              try:
+                  with open(fname) as f:
+                      content = f.read()
+                  match = re.search(r'v(\d+\.\d+)', content)
+                  if match:
+                      versions[fname] = match.group(1)
+              except FileNotFoundError:
+                  pass
+          
+          print('Versioni trovate:')
+          for fname, ver in versions.items():
+              print(f'  {fname}: v{ver}')
+          
+          unique_versions = set(versions.values())
+          if len(unique_versions) > 1:
+              print(f'\n⚠️  WARN: Versioni inconsistenti: {unique_versions}')
+          else:
+              print('\n✅ Versione coerente ovunque')
+          EOF
+
+      - name: Summary
+        run: |
+          echo "## Validate Skills Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Stub check completato" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ URL check completato" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Wrapper check completato" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Version check completato" >> $GITHUB_STEP_SUMMARY
