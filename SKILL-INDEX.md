@@ -1,6 +1,6 @@
 # SKILL-INDEX — SKIllaME v3.2
 
-> **Master index COMPLETO di tutte le skill disponibili — 35 skill attive + 40+ community.**
+> **Master index COMPLETO di tutte le skill disponibili — 33 skill attive + 40+ community.**
 > Copia gli URL raw nella sezione Knowledge di un MyGPT, nelle Sources di Perplexity Space,
 > o incollali come prompt di sessione in qualsiasi agente AI.
 >
@@ -32,10 +32,10 @@
 | 8 | **TP Transfer Pricing Core** | ✅ Produzione | transfer pricing generale, metodi OCSE, arm's length | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Lavoro/TP/transfer-pricing.md` |
 | 9 | **TP Architect Omni HA** | 🟡 Draft | automazione TP, workflow, pipeline, n8n, Python | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Lavoro/TP/architect-omni-tp-ha-SKILL.md` |
 | 10 | **TP Populate Analisi** | 🟡 Draft | struttura analisi TP, populate analisi | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Lavoro/TP/populate-analisi.md` |
-| 11 | **TP Doc Valbruna (caso reale)** | 🟡 Draft | valbruna, documentazione TP caso, local file esempio | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Lavoro/TP/tp%20doc%20valbrunaaaa.md` |
+| 11 | **TP Doc Valbruna (caso reale)** | 🟡 Draft | valbruna, documentazione TP caso, local file esempio, delta analyzer | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Lavoro/TP/tp-doc-valbruna.md` |
 | 12 | **TP Schiavo / Omni TP v4.0** | 🟡 Draft | tp schiavo, architect omni tp, workflow documentazione | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/tp-schiavo.md` |
 
-> ✅ **STUB RIMOSSI**: `general-transfer-pricing.md` e `tp doc valbruna.md` ora reindirizzano al file corretto. Usa #8 (TP Core) e #11 (TP Doc Valbruna completo) come alternative.
+> ✅ **STUB RIMOSSI**: `general-transfer-pricing.md` → redirect a #8. `tp doc valbrunaaaa.md` → rinominato in `tp-doc-valbruna.md` (#11).
 
 ---
 
@@ -46,8 +46,7 @@
 | 13 | **Pillar Two / GloBE** (wrapper completo) | ✅ Produzione | GloBE, IIR, UTPR, QDMTT, STTR, 15%, D.Lgs. 209/2023, ETR | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/pillar-two/SKILL.md` |
 | 14 | **Fiscalità Internazionale** (wrapper completo) | ✅ Produzione | CFC, MAP, APA, trattati, WHT, BEPS, stabile organizzazione | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/fiscalita-internazionale/SKILL.md` |
 
-> ✅ **STUB RIMOSSI (B3+B4)**: `pillar2_globe_compliance_skill.md` e `general-transfer-pricing.md` ora contengono redirect al file corretto invece di template vuoto.
-> Usa #13 (Pillar Two wrapper) per Pillar 2, usa #8 (TP Core) per General TP.
+> ✅ **STUB RIMOSSI (B3+B4)**: `pillar2_globe_compliance_skill.md` e `general-transfer-pricing.md` ora contengono redirect. Usa #13 e #8 per uso in produzione.
 
 ---
 
@@ -64,7 +63,7 @@
 | 21 | **Architect-Omni Prime** 🆕 | ✅ Produzione | architect omni, solution architecture, backend, Python, AI systems, HA, resilienza | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/architect-omni-prime.md` |
 | 22 | **EDFX Pricing Agent v3.1-HA** | ✅ Produzione | EDFX, pricing, credit spread, Moody's, bond, ISIN | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/EDFX_Pricing_Agent_Skill_v3.1%20no%20claudio.md` |
 
-> ✅ **BUG B1 RISOLTO**: `IT Help Desk.md` rinominato in `architect-omni-prime.md`. Architect-Omni Prime ora ha la sua entry dedicata (#21) con URL corretto.
+> ✅ **BUG B1 RISOLTO**: `IT Help Desk.md` → `architect-omni-prime.md`. Entry dedicata #21 con URL corretto.
 
 ---
 
@@ -83,11 +82,9 @@
 |---|------|-------|-------------|----------|
 | 25 | **Swiss Steel Italia TP Doc** | ✅ Produzione | Documentazione TP caso reale Swiss Steel (9 fasi, 5 transazioni IC) | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Lavoro/TP/swiss-steel-italia-transfer-pricing-documentation.md` |
 
-> ✅ **RIMOSSO (Stub vuoto)**: `tp doc valbruna.md` — ora reindirizza a skill #11. **RIMOSSO (Duplicato)**: "Swiss Steel / Valbruna Full" — era identico all'URL di #25.
-
 ---
 
-## 🆕 NUOVE SKILL — 10 skill (v3.2)
+## 🆕 NUOVE SKILL — 8 skill (v3.2)
 
 | # | Skill | Stato | Trigger Keywords | URL Raw |
 |---|-------|-------|-----------------|----------|
@@ -147,11 +144,11 @@ https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Lavo
 PILLAR TWO:
 https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/pillar-two/SKILL.md
 
-FISCALITÀ INTERNAZIONALE:
-https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/fiscalita-internazionale/SKILL.md
-
 ARCHITECT-OMNI PRIME:
 https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/architect-omni-prime.md
+
+TP DOC VALBRUNA (Delta Analyzer):
+https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Lavoro/TP/tp-doc-valbruna.md
 ```
 
 ---
@@ -209,33 +206,34 @@ gh skill install bonaventura7/SKIllaME --all --agent copilot
 
 ---
 
-## 📊 STATISTICHE v3.2 — Post Bug Fix
+## 📊 STATISTICHE v3.2 — Zero Bug Aperti Critici
 
 | Categoria | ✅ Produzione | 🟡 Draft | ⚠️ Stub | Totale Attive |
 |-----------|--------------|---------|--------|---------------|
 | Transfer Pricing | 8 | 4 | 0 | 12 |
 | Fiscalità Internazionale | 2 | 0 | 0 | 2 |
-| Agenti AI | 7 | 1 | 0 | **8** |
+| Agenti AI | 7 | 1 | 0 | 8 |
 | Tecniche | 2 | 0 | 0 | 2 |
 | Casi Reali / Docs | 1 | 0 | 0 | 1 |
 | Nuove Skill (v3.2) | 5 | 3 | 0 | 8 |
 | Community (terzi) | ~30+ | — | — | ~30+ |
 | **TOTALE** | **25** | **8** | **0** | **33 + 30+ community** |
 
-> Stub rimossi: **3** (general-TP, pillar2-compliance, tp-doc-valbruna). Duplicato rimosso: **1**. Bug B1/B3/B4: **✅ RISOLTI**.
+> Bug critici/medi risolti: **4 su 4** (B1–B4). Stub attivi: **0**. Unica pendenza residua: B5 (bassa priorità — nomi file con spazi).
 
 ---
 
-## 🔍 BUG TRACKER
+## 🔍 BUG TRACKER — v3.2 Final
 
 | # | Bug | Stato | Fix applicato |
 |---|-----|-------|---------------|
 | B1 | `IT Help Desk.md` conteneva Architect-Omni Prime | ✅ RISOLTO | Rinominato in `architect-omni-prime.md`, entry #21 aggiunta |
-| B2 | `tp doc valbrunaaaa.md` — nome file con "aaaa" | 🟡 Aperto | Da rinominare in `tp-doc-valbruna.md` |
-| B3 | Stub `pillar2_globe_compliance_skill.md` | ✅ RISOLTO | Sostituito con redirect al wrapper corretto |
-| B4 | Stub `general-transfer-pricing.md` | ✅ RISOLTO | Sostituito con redirect a TP Core + TP Toolbox |
-| B5 | Nomi file con spazi (`Report BM 2.0.md`, `Manual Review.md`) | 🟢 Bassa | Da rinominare in kebab-case |
+| B2 | `tp doc valbrunaaaa.md` — nome file con typo "aaaa" | ✅ RISOLTO | Rinominato in `tp-doc-valbruna.md`, URL #11 aggiornato |
+| B3 | Stub `pillar2_globe_compliance_skill.md` vuoto | ✅ RISOLTO | Sostituito con redirect al wrapper Pillar Two corretto |
+| B4 | Stub `general-transfer-pricing.md` vuoto | ✅ RISOLTO | Sostituito con redirect a TP Core (#8) + TP Toolbox (#4) |
+| B5 | Nomi file con spazi (`Report BM 2.0.md`, `Manual Review.md`) | 🟢 Bassa | Opzionale — rinominare in kebab-case se si usa CLI |
 
 ---
 
 *Generato da ARCHITECT-OMNI PRIME — Senior Solutions Architect 35+ anni | Giugno 2026*
+*Bug B1–B4: tutti risolti. Repo pulito — zero stub, zero typo critici.*
