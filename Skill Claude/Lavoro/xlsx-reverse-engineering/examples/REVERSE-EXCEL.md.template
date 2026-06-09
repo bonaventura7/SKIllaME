@@ -1,0 +1,50 @@
+# REVERSE-EXCEL.md - [FILENAME]
+
+**File**: `examples/sample_re_test.xlsx` (or your file)
+**Started**: 2026-06-09
+**Status**: In Progress / Complete
+
+## File Metadata
+- Size: 
+- Sheets: 
+- Has macros: No / Yes (.xlsm)
+- Recalc performed: Yes / No (LibreOffice)
+
+## High-Level Summary (update after each phase)
+[Write 3-5 sentence architectural overview here after synthesis]
+
+## Task Checklist (check as you go - agent should read this first on continuation)
+
+- [ ] Phase 0: Intake & Bootstrap (run inventory.py)
+- [ ] Phase 1: Structural Archeology (unpack + hidden sheets/names)
+- [ ] Phase 2: Data Archeology (recalc + pandas profiling)
+- [ ] Phase 3: Formula & Logic Decompilation (extract_formulas + categorization)
+- [ ] Phase 4: Advanced Features & Macros
+- [ ] Phase 5: Anomaly & Security Analysis (analyze_anomalies.py)
+- [ ] Phase 6: Synthesis (business rules, data model, Mermaid graph)
+- [ ] Phase 7: Verification (verify.py + manual spot checks)
+- [ ] Final Executive Summary + recommendations
+
+## Findings (add with certainty tags + citations)
+
+### [Phase X] Finding 1: Title
+**Certainty**: [Confirmed] / [Inferred] / [Unknown]
+**Source(s)**: Sheet1!B2, xl/workbook.xml (state="veryHidden")
+**Observation**: ...
+**Reconstructed Rule**: ...
+**Verification**: ...
+**Open Questions**: ...
+
+## Open Questions / Assumptions
+- 
+
+## Recommendations
+- 
+
+## Next Actions (top 3-5 for continuation)
+1. 
+2. 
+3. 
+
+---
+*This document is the single source of truth for the current reverse engineering session. Update it frequently.*

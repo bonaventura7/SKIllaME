@@ -1,0 +1,46 @@
+[
+  {
+    "query": "reverse engineer the logic in Q4-financial-model-FINAL.xlsx before we migrate it to Python",
+    "should_trigger": true,
+    "reason": "Clear RE intent on existing file + migration context"
+  },
+  {
+    "query": "Use xlsx-reverse-engineering skill to audit this spreadsheet for hidden sheets and malicious macros",
+    "should_trigger": true
+  },
+  {
+    "query": "perform system archeology on this undocumented workbook to extract business rules",
+    "should_trigger": true
+  },
+  {
+    "query": "map all dependencies and reconstruct the formulas in sales-2025.xlsx",
+    "should_trigger": true
+  },
+  {
+    "query": "the xlsx in my downloads (legacy model) - I need to understand how the calculations actually work",
+    "should_trigger": true
+  },
+  {
+    "query": "Add a profit margin column to this spreadsheet and make it look professional",
+    "should_trigger": false,
+    "reason": "Forward creation/editing task - should use xlsx skill"
+  },
+  {
+    "query": "Read the data from sales.xlsx and create a summary chart",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a new budget template in Excel with blue inputs and black formulas",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix the #REF! errors in my financial model.xlsx",
+    "should_trigger": false,
+    "reason": "Editing/fixing - xlsx skill"
+  },
+  {
+    "query": "What's in this Excel file? Can you explain the main numbers?",
+    "should_trigger": false,
+    "reason": "Casual summary, not deep RE with artifacts"
+  }
+]
