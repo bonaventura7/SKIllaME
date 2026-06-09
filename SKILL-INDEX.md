@@ -1,6 +1,6 @@
-# SKILL-INDEX — SKIllaME v3.2
+# SKILL-INDEX — SKIllaME v3.3
 
-> **Master index COMPLETO di tutte le skill disponibili — 33 skill attive + 40+ community.**
+> **Master index COMPLETO di tutte le skill disponibili — 35 skill attive + 40+ community.**
 > Copia gli URL raw nella sezione Knowledge di un MyGPT, nelle Sources di Perplexity Space,
 > o incollali come prompt di sessione in qualsiasi agente AI.
 >
@@ -67,12 +67,14 @@
 
 ---
 
-## 🟣 SKILL TECNICHE — 2 skill
+## 🟣 SKILL TECNICHE — 4 skill
 
 | # | Skill | Stato | Trigger Keywords | URL Raw |
 |---|-------|-------|-----------------|----------|
 | 23 | **Spreadsheet Reverse Engineering** | ✅ Produzione | Excel reverse, formula audit, spreadsheet analisi, Google Sheets | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Lavoro/Skill_Claude_Spreadsheet_Reverse_Engineering.md` |
 | 24 | **Architettura Workflow HA** | ✅ Produzione | n8n, workflow, resilienza, HA, retry, circuit breaker, agenti AI | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/architettura-workflow/SKILL.md` |
+| 34 | **XLSX Reverse Engineering** 🆕 | ✅ Produzione | xlsx, Excel reverse avanzato, formula audit, mappatura dati Excel, reverse engineering Excel, audit formule TP | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/xlsx-reverse-engineering/SKILL.md` |
+| 35 | **Skill Creator** 🆕 | ✅ Produzione | crea skill, nuova skill, skill creator, scaffolding skill, anthropic skill, genera skill | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/skill-creator/SKILL.md` |
 
 ---
 
@@ -149,6 +151,12 @@ https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agen
 
 TP DOC VALBRUNA (Delta Analyzer):
 https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Lavoro/TP/tp-doc-valbruna.md
+
+XLSX REVERSE ENGINEERING:
+https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/xlsx-reverse-engineering/SKILL.md
+
+SKILL CREATOR:
+https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/skill-creator/SKILL.md
 ```
 
 ---
@@ -163,6 +171,8 @@ https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Lavo
 https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/pillar-two/SKILL.md
 https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/fiscalita-internazionale/SKILL.md
 https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/architettura-workflow/SKILL.md
+https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/xlsx-reverse-engineering/SKILL.md
+https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/skill-creator/SKILL.md
 ```
 
 ---
@@ -206,24 +216,25 @@ gh skill install bonaventura7/SKIllaME --all --agent copilot
 
 ---
 
-## 📊 STATISTICHE v3.2 — Zero Bug Aperti Critici
+## 📊 STATISTICHE v3.3 — Zero Bug Aperti Critici
 
 | Categoria | ✅ Produzione | 🟡 Draft | ⚠️ Stub | Totale Attive |
 |-----------|--------------|---------|--------|---------------|
 | Transfer Pricing | 8 | 4 | 0 | 12 |
 | Fiscalità Internazionale | 2 | 0 | 0 | 2 |
 | Agenti AI | 7 | 1 | 0 | 8 |
-| Tecniche | 2 | 0 | 0 | 2 |
+| Tecniche | 4 | 0 | 0 | 4 |
 | Casi Reali / Docs | 1 | 0 | 0 | 1 |
 | Nuove Skill (v3.2) | 5 | 3 | 0 | 8 |
 | Community (terzi) | ~30+ | — | — | ~30+ |
-| **TOTALE** | **25** | **8** | **0** | **33 + 30+ community** |
+| **TOTALE** | **27** | **8** | **0** | **35 + 30+ community** |
 
 > Bug critici/medi risolti: **4 su 4** (B1–B4). Stub attivi: **0**. Unica pendenza residua: B5 (bassa priorità — nomi file con spazi).
+> Nuove skill v3.3: #34 xlsx-reverse-engineering (Desktop Luca), #35 skill-creator (Anthropic main skills).
 
 ---
 
-## 🔍 BUG TRACKER — v3.2 Final
+## 🔍 BUG TRACKER — v3.3 Final
 
 | # | Bug | Stato | Fix applicato |
 |---|-----|-------|---------------|
@@ -236,4 +247,4 @@ gh skill install bonaventura7/SKIllaME --all --agent copilot
 ---
 
 *Generato da ARCHITECT-OMNI PRIME — Senior Solutions Architect 35+ anni | Giugno 2026*
-*Bug B1–B4: tutti risolti. Repo pulito — zero stub, zero typo critici.*
+*v3.3: +2 skill nuove (#34 xlsx-reverse-engineering, #35 skill-creator). Bug B1–B4: tutti risolti. Repo pulito.*
