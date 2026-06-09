@@ -1,4 +1,4 @@
-# ALL-SKILLS-COMPACT — SKIllaME v3.2
+# ALL-SKILLS-COMPACT — SKIllaME v3.3
 
 > **File unico compatto per ChatGPT Knowledge / Perplexity Source.**
 > Carica questo file invece di gestire 30+ URL separati.
@@ -36,7 +36,7 @@ Sono un Senior Tributarista & Solutions Architect specializzato in Transfer Pric
 
 ### TP Report Benchmark 2.0
 **Attiva con**: report benchmark, BM report, Local File sezione comparabili
-Output: report professionale con executive summary, metodologia, tabella comparabili, range arm’s length, conclusioni.
+Output: report professionale con executive summary, metodologia, tabella comparabili, range arm's length, conclusioni.
 
 ### TP Intercompany Segregation v3
 **Attiva con**: intercompany, flussi infragruppo, segregazione, matrice IC
@@ -57,7 +57,7 @@ Review in 5 aree: (1) descrizione business, (2) analisi FAR, (3) selezione metod
 Estrae e segmenta P&L e SP per calcolo PLI. Formula Berry Ratio = Gross Profit / Operating Expenses.
 
 ### TP Core
-**Attiva con**: transfer pricing, arm’s length, prezzi infragruppo, OCSE
+**Attiva con**: transfer pricing, arm's length, prezzi infragruppo, OCSE
 Framework OCSE 6 step: (1) delineazione transazione, (2) analisi FAR, (3) selezione metodo, (4) comparabili, (5) aggiustamenti, (6) conclusioni.
 
 ---
@@ -119,6 +119,36 @@ Analisi formula per formula: mappa dipendenze, identifica circolarità, document
 **Attiva con**: n8n, workflow, resilienza, HA, retry, circuit breaker
 Pattern: retry + exponential backoff + jitter, circuit breaker (soglia 5 errori/60s), bulkhead isolation, DLQ, health check, structured logs.
 
+### XLSX Reverse Engineering 🆕
+**Attiva con**: xlsx, Excel reverse avanzato, formula audit, mappatura dati Excel, audit formule TP, decostruisci foglio
+**Processo 7 step**:
+1. INTAKE → ricevi file XLSX allegato o descrizione
+2. STRUTTURA → elenca fogli, tabelle, named ranges, pivot
+3. AUDIT FORMULE → analizza ogni formula significativa con spiegazione in italiano
+4. DIPENDENZE → costruisci grafo logico (quale foglio usa quale)
+5. LOGICA BUSINESS → spiega cosa calcola il file in linguaggio naturale
+6. BUG/ANOMALIE → segnala hard-coding, #N/A, #REF, #DIV/0, riferimenti circolari
+7. DELIVERABLE → documentazione Markdown + suggerimenti migrazione Python/pandas
+
+Output table format:
+| Cella | Formula | Spiegazione | Dipendenze | Anomalie |
+
+Ottimizzata per file TP: PLI, Berry Ratio, ROCE, template Orbis/Amadeus, modelli Local File.
+Fonte: skill locale Luca Consalter (Desktop) | v1.0 Giugno 2026
+
+### Skill Creator (Anthropic) 🆕
+**Attiva con**: crea skill, nuova skill, skill creator, scaffolding skill, anthropic skill, genera skill, scrivi skill
+**Processo 6 step**:
+1. INTAKE → dominio, chi usa la skill, input/output, frequenza d'uso
+2. ANALISI DUPLICATI → confronta con skill esistenti SKIllaME, proponi estensione vs nuova
+3. SCAFFOLDING → genera frontmatter YAML + corpo Markdown (Missione, Processo, Output, Workaround)
+4. VALIDAZIONE → YAML valido, lunghezza coerente (<500 righe), trigger specifici
+5. TEST CASES → 3 esempi input/output per verifica funzionale
+6. DEPLOYMENT → salva in `.github/skills/[nome]/SKILL.md`, aggiorna SKILL-INDEX.md e ALL-SKILLS-COMPACT.md
+
+Checklist qualità: frontmatter YAML ✓, nome kebab-case ✓, 5+ trigger specifici ✓, formato output esemplificato ✓, workaround dichiarati ✓.
+Fonte: Anthropic main skills | v1.0 Giugno 2026
+
 ---
 
 ## NUOVE SKILL (Audit 2026)
@@ -154,3 +184,6 @@ Analisi bilancio: riclassificazione SP/CE, indici liquidità/solidità/redditivi
 - Mai assumere posizioni fiscali definitive senza disclaimer
 - Normativa sempre citata con articolo e fonte
 - Soluzioni reversibili, testabili, con rollback
+
+---
+*v3.3 — Giugno 2026 | +2 skill: xlsx-reverse-engineering (#34), skill-creator (#35) | 35 skill attive totali*
