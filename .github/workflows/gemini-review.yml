@@ -1,0 +1,24 @@
+name: Gemini AI Review
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  gemini-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Gemini Code Review
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          curl -s \
+            "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent?key=$GEMINI_API_KEY" \
+            -H 'Content-Type: application/json' \
+            -d '{
+              "contents":[{
+                "parts":[{
+                  "text":"Sei un senior tax architect. Analizza le modifiche di questo PR e fornisci feedback in italiano."
+                }]
+              }]
+            }'
