@@ -1,11 +1,11 @@
-# SKILL-INDEX — SKIllaME v3.3
+# SKILL-INDEX — SKIllaME v3.4
 
-> **Master index COMPLETO di tutte le skill disponibili — 35 skill attive + 40+ community.**
+> **Master index COMPLETO di tutte le skill disponibili — 36 skill attive + 40+ community.**
 > Copia gli URL raw nella sezione Knowledge di un MyGPT, nelle Sources di Perplexity Space,
 > o incollali come prompt di sessione in qualsiasi agente AI.
 >
 > ⚠️ **Usa solo le skill marcate `✅ Produzione`** per uso in produzione.
-> Ultimo aggiornamento: Giugno 2026 | Audit: Senior Solutions Architect 35+ anni
+> Ultimo aggiornamento: Luglio 2026 | Audit: Senior Solutions Architect 35+ anni
 
 ---
 
@@ -50,7 +50,7 @@
 
 ---
 
-## 🔴 SKILL AGENTI AI — 8 skill
+## 🔴 SKILL AGENTI AI — 9 skill
 
 | # | Skill | Stato | Trigger Keywords | URL Raw |
 |---|-------|-------|-----------------|----------|
@@ -60,10 +60,12 @@
 | 18 | **Agente Trenitalia v5.1.1** | ✅ Produzione | trenitalia, treni, biglietti, rimborso, OTP, CartaFRECCIA | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/skill_agent_trenitalia.md` |
 | 19 | **Agente Valutatore Immobili Milano v5.1** | ✅ Produzione | valutazione immobili, Milano, perizia, CRU, OMI, TIR | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/valutatore-immobili-milano-v5.1.md` |
 | 20 | **Agente IT Help Desk** | 🟡 Draft | IT helpdesk, supporto tecnico, troubleshooting, Windows | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/agente-it-helpdesk/SKILL.md` |
-| 21 | **Architect-Omni Prime** 🆕 | ✅ Produzione | architect omni, solution architecture, backend, Python, AI systems, HA, resilienza | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/architect-omni-prime.md` |
+| 21 | **Architect-Omni Prime** | ✅ Produzione | architect omni, solution architecture, backend, Python, AI systems, HA, resilienza | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/architect-omni-prime.md` |
 | 22 | **EDFX Pricing Agent v3.1-HA** | ✅ Produzione | EDFX, pricing, credit spread, Moody's, bond, ISIN | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/EDFX_Pricing_Agent_Skill_v3.1%20no%20claudio.md` |
+| 36 | **Bison** 🆕 | ✅ Produzione | bison, agente AI, automazione, workflow intelligente | `https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/bison.md` |
 
 > ✅ **BUG B1 RISOLTO**: `IT Help Desk.md` → `architect-omni-prime.md`. Entry dedicata #21 con URL corretto.
+> ✅ **v3.4**: Aggiunta skill **Bison** (#36) in categoria Agenti AI.
 
 ---
 
@@ -157,6 +159,9 @@ https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/xlsx
 
 SKILL CREATOR:
 https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/skill-creator/SKILL.md
+
+BISON:
+https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/bison.md
 ```
 
 ---
@@ -173,6 +178,7 @@ https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/fisc
 https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/architettura-workflow/SKILL.md
 https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/xlsx-reverse-engineering/SKILL.md
 https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/.github/skills/skill-creator/SKILL.md
+https://raw.githubusercontent.com/bonaventura7/SKIllaME/main/Skill%20Claude/Agenti%2000tot/bison.md
 ```
 
 ---
@@ -216,25 +222,25 @@ gh skill install bonaventura7/SKIllaME --all --agent copilot
 
 ---
 
-## 📊 STATISTICHE v3.3 — Zero Bug Aperti Critici
+## 📊 STATISTICHE v3.4 — Zero Bug Aperti Critici
 
 | Categoria | ✅ Produzione | 🟡 Draft | ⚠️ Stub | Totale Attive |
 |-----------|--------------|---------|--------|---------------|
 | Transfer Pricing | 8 | 4 | 0 | 12 |
 | Fiscalità Internazionale | 2 | 0 | 0 | 2 |
-| Agenti AI | 7 | 1 | 0 | 8 |
+| Agenti AI | 8 | 1 | 0 | 9 |
 | Tecniche | 4 | 0 | 0 | 4 |
 | Casi Reali / Docs | 1 | 0 | 0 | 1 |
 | Nuove Skill (v3.2) | 5 | 3 | 0 | 8 |
 | Community (terzi) | ~30+ | — | — | ~30+ |
-| **TOTALE** | **27** | **8** | **0** | **35 + 30+ community** |
+| **TOTALE** | **28** | **8** | **0** | **36 + 30+ community** |
 
 > Bug critici/medi risolti: **4 su 4** (B1–B4). Stub attivi: **0**. Unica pendenza residua: B5 (bassa priorità — nomi file con spazi).
-> Nuove skill v3.3: #34 xlsx-reverse-engineering (Desktop Luca), #35 skill-creator (Anthropic main skills).
+> Nuove skill v3.4: #36 **Bison** (Agenti AI — `Skill Claude/Agenti 00tot/bison.md`).
 
 ---
 
-## 🔍 BUG TRACKER — v3.3 Final
+## 🔍 BUG TRACKER — v3.4 Final
 
 | # | Bug | Stato | Fix applicato |
 |---|-----|-------|---------------|
@@ -246,5 +252,5 @@ gh skill install bonaventura7/SKIllaME --all --agent copilot
 
 ---
 
-*Generato da ARCHITECT-OMNI PRIME — Senior Solutions Architect 35+ anni | Giugno 2026*
-*v3.3: +2 skill nuove (#34 xlsx-reverse-engineering, #35 skill-creator). Bug B1–B4: tutti risolti. Repo pulito.*
+*Generato da ARCHITECT-OMNI PRIME — Senior Solutions Architect 35+ anni | Luglio 2026*
+*v3.4: +1 skill nuova (#36 Bison, Agenti AI). Indice aggiornato e allineato. Zero refusi. Zero stub. Zero bug critici.*
