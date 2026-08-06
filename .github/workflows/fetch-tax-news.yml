@@ -1,0 +1,58 @@
+# ============================================================
+# GitHub Action: Fetch Tax News (Approccio B+)
+# Trigger: ogni lunedì 06:00 UTC + manuale
+# Alternativa a pg_cron (Supabase free tier)
+# ============================================================
+
+name: Fetch Tax News — Primary Sources Only
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'   # Ogni lunedì 06:00 UTC
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (no INSERT)'
+        type: boolean
+        default: false
+
+jobs:
+  fetch:
+    name: Fetch & Draft Articles
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Call Edge Function fetch-primary-news
+        run: |
+          RESPONSE=$(curl -s -w "\n%{http_code}" \
+            -X POST \
+            -H "Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}" \
+            -H "Content-Type: application/json" \
+            "${{ secrets.SUPABASE_URL }}/functions/v1/fetch-primary-news")
+
+          HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
+          BODY=$(echo "$RESPONSE" | head -n -1)
+
+          echo "HTTP Status: $HTTP_CODE"
+          echo "Response: $BODY"
+
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "::error::Edge Function failed with status $HTTP_CODE"
+            exit 1
+          fi
+
+          INSERTED=$(echo $BODY | python3 -c "import sys,json; print(json.load(sys.stdin).get('totalInserted', 0))")
+          echo "::notice::Articoli in DRAFT: $INSERTED"
+
+      - name: Notify Editor (if new drafts)
+        if: success()
+        run: |
+          echo "Notifica editor: verificare nuovi DRAFT su Supabase TP Box"
+          # Aggiungere qui: curl webhook Slack/email con lista DRAFT
+          # curl -X POST ${{ secrets.SLACK_WEBHOOK }} \
+          #   -H 'Content-type: application/json' \
+          #   --data '{"text":"Nuovi articoli DRAFT da revisionare su TP Box"}'
