@@ -1,0 +1,24 @@
+# ============================================================
+# Supabase Project Configuration
+# Ref: https://supabase.com/docs/guides/functions/function-configuration
+# ============================================================
+
+[api]
+enabled = true
+
+# ─────────────────────────────────────────────────────────
+# fetch-primary-news Edge Function
+# ─────────────────────────────────────────────────────────
+# verify_jwt = false perché la funzione è invocata da
+# GitHub Actions (cron schedulato esterno), che non dispone
+# di un JWT utente Supabase.
+#
+# La sicurezza è garantita dall'header X-Cron-Secret:
+# la funzione confronta il valore con CRON_SECRET
+# (variabile d'ambiente Supabase) e risponde 401 se non corrisponde.
+#
+# Per impostare il segreto su Supabase:
+#   supabase secrets set CRON_SECRET=<valore> --project-ref <ref>
+# ─────────────────────────────────────────────────────────
+[functions.fetch-primary-news]
+verify_jwt = false
