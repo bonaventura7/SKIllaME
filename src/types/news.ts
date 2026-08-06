@@ -1,105 +1,98 @@
 /**
- * Types: Attualità Fiscale — TP Box
- * Sincronizzati con schema Supabase (news_sources, news_items)
+ * Tipi per il sistema di notizie TP Box
+ * Modello editoriale: RegFollower-style
+ * Categorie: TP | VAT | P2 | AA
+ * Filtri: categoria + paese
  */
 
 export type NewsCategory = 'TP' | 'VAT' | 'P2' | 'AA';
+export type NewsStatus   = 'DRAFT' | 'IN_REVIEW' | 'PUBLISHED';
 
-export type NewsStatus = 'DRAFT' | 'IN_REVIEW' | 'PUBLISHED' | 'ARCHIVED';
-
-export type WatchType = 'RSS' | 'ATOM' | 'HTML_WATCH';
-
-export type HealthStatus = 'OK' | 'WARN' | 'ERROR' | 'DISABLED';
-
-export interface NormativoReference {
-  tipo: 'articolo' | 'comma' | 'legge' | 'direttiva' | 'regolamento' | 'provvedimento';
+export interface NormativoRef {
+  tipo:   string;  // 'articolo' | 'direttiva' | 'legge' | 'circolare'
   numero: string;
-  fonte: string;
-  data?: string;
-  url?: string;
-}
-
-export interface NewsSource {
-  id: string;
-  name: string;
-  category: NewsCategory;
-  country: string;
-  feed_url: string | null;
-  watch_type: WatchType;
-  css_selector: string | null;
-  enabled: boolean;
-  last_fetched_at: string | null;
-  health_status: HealthStatus;
-  fail_count: number;
-  created_at: string;
+  fonte:  string;
+  data?:  string;
+  url?:   string;
 }
 
 export interface NewsItem {
-  id: string;
-  title: string;
-  summary: string;
-  content_markdown?: string;
-  category: NewsCategory;
-  country?: string;
-  source_name: string;
-  source_url: string;
-  pdf_url?: string;
-  pdf_local_path?: string;
-  normative_references: NormativoReference[];
-  status: NewsStatus;
-  url_hash: string;
-  reviewed_by?: string;
-  published_at?: string;
-  created_at: string;
-  updated_at: string;
+  id:                    string;
+  title:                 string;
+  summary:               string;
+  body?:                 string;          // corpo articolo completo (markdown)
+  category:              NewsCategory;
+  country:               string;          // ISO 2 o 'INT'
+  source_name:           string;
+  source_url:            string;          // URL articolo originale
+  pdf_url?:              string;          // link diretto PDF ufficiale
+  url_hash:              string;
+  normative_references?: NormativoRef[];
+  status:                NewsStatus;
+  published_at?:         string;
+  pub_date?:             string;
+  created_at:            string;
+  updated_at:            string;
 }
 
-/** Filtri per il feed pubblico */
 export interface NewsFilters {
   category?: NewsCategory;
-  country?: string;        // ISO 3166-1 alpha-2
-  from?: string;           // ISO date YYYY-MM-DD
-  to?: string;
-  q?: string;              // full-text search
-  page?: number;
-  limit?: number;
+  country?:  string;
+  q?:        string;
+  from?:     string;
+  to?:       string;
+  page?:     number;
+  limit?:    number;
 }
 
-/** Risultato paginato */
 export interface NewsFeedResult {
-  items: NewsItem[];
-  total: number;
+  items:               NewsItem[];
+  total:               number;
   availableCategories: NewsCategory[];
-  availableCountries: string[];
-  page: number;
-  limit: number;
-  hasMore: boolean;
+  availableCountries:  string[];
+  page:                number;
+  limit:               number;
+  hasMore:             boolean;
 }
 
-/** Label leggibili per UI */
+// ── Mappe UI ────────────────────────────────────────────────────────────────
+
 export const CATEGORY_LABELS: Record<NewsCategory, string> = {
   TP:  'Transfer Pricing',
   VAT: 'IVA / VAT',
-  P2:  'Pillar Two / GloBE',
-  AA:  'Anti-Avoidance',
+  P2:  'Pillar Two',
+  AA:  'Anti Avoidance',
 };
 
-export const CATEGORY_COLORS: Record<NewsCategory, string> = {
-  TP:  'blue',
-  VAT: 'green',
-  P2:  'purple',
-  AA:  'orange',
+export const CATEGORY_COLORS: Record<NewsCategory, { bg: string; text: string; border: string }> = {
+  TP:  { bg: 'bg-blue-50',   text: 'text-blue-800',   border: 'border-blue-200'  },
+  VAT: { bg: 'bg-amber-50',  text: 'text-amber-800',  border: 'border-amber-200' },
+  P2:  { bg: 'bg-purple-50', text: 'text-purple-800', border: 'border-purple-200'},
+  AA:  { bg: 'bg-red-50',    text: 'text-red-800',    border: 'border-red-200'   },
 };
 
-export const COUNTRY_LABELS: Record<string, string> = {
+export const COUNTRY_FLAGS: Record<string, string> = {
+  IT:  '🇮🇹',
+  EU:  '🇪🇺',
+  INT: '🌐',
+  US:  '🇺🇸',
+  UK:  '🇬🇧',
+  IN:  '🇮🇳',
+  DE:  '🇩🇪',
+  FR:  '🇫🇷',
+  JP:  '🇯🇵',
+  AU:  '🇦🇺',
+};
+
+export const COUNTRY_NAMES: Record<string, string> = {
   IT:  'Italia',
   EU:  'Unione Europea',
+  INT: 'Internazionale',
   US:  'Stati Uniti',
   UK:  'Regno Unito',
-  CA:  'Canada',
-  AU:  'Australia',
   IN:  'India',
-  INT: 'Internazionale',
   DE:  'Germania',
   FR:  'Francia',
+  JP:  'Giappone',
+  AU:  'Australia',
 };
